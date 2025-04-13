@@ -1,0 +1,19 @@
+Databases:
+  VoxConverse: ../audio/all/{uri}.wav
+
+Protocols:
+  VoxConverse:
+    SpeakerDiarization:
+      finetune:
+        train:
+          uri: ../lists/dev.txt
+          annotation: ../rttms/dev/{uri}.rttm
+          annotated: ../uems/dev/{uri}.uem
+        development:
+          uri: ../lists/dev.txt
+          annotation: ../rttms/dev/{uri}.rttm
+          annotated: ../uems/dev/{uri}.uem
+        test:
+          uri: ../lists/test.txt
+          annotation: ../rttms/test/{uri}.rttm
+          annotated: ../uems/test/{uri}.uem
